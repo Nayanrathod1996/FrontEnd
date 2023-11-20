@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        #hide {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #hide {
+            width: 500px;
+            height: 500px;
+            position: absolute;
+
+        }
+
+        .closed {
+            position: absolute;
+            right: 0px;
+            top: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const demo = () => {
+            let doc = document.getElementById("hide");
+            doc.style.display = "none";
+
+        }
+        const Showsign = () => {
+            let doc = document.getElementById("hide");
+            doc.style.display = "block";
+
+        }
+
+
+    </script>
+    <button onclick="Showsign()">Sign Up</button>
+
+    <div id="hide">
+        <button class="closed" onclick="demo()">&times;</button>
+        <form id="signup-form">
+            <label for="username">First Name:</label>
+            <input type="text" id="username" name="Firstname" required>
+            <label for="username">Last Name:</label>
+            <input type="text" id="username" name="Lastname" required>
+
+            <label for="email">Date Of Birth:</label>
+            <input type="date" id="date" name="dob" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+
+
+</body>
+
+</html>
